@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click to get Current Date and Time</title>
+    <style>
+      body {
+        background-color: rgb(160, 159, 160);
+      }
+
+      h1 {
+        color: rgb(11, 2, 11);
+      }
+      #mn {
+        margin-top: 140px;
+        margin-left: 500px;
+      }
+      button {
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        padding: 10px;
+      }
+      .output-style {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mn">
+      <h2>Click To Know Current Date and Time</h2>
+      <button id="myButton">Get Current Date and Time</button>
+      <div id="dateTime" class="output-style"></div>
+    </div>
+
+    <script src="dateTimeModule.js"></script>
+    <script src="m1.js"></script>
+
+    <script>
+      const button = document.getElementById("myButton");
+
+      button.addEventListener("click", function () {
+        const formattedDateTime = resp();
+        document.getElementById("dateTime").innerHTML = formattedDateTime;
+      });
+    </script>
+  </body>
+</html>
